@@ -1,19 +1,30 @@
+localStorage.setItem(
+  "IconGif",
+  "https://media.tenor.com/jFn8sS1Et-0AAAAM/cat.gif"
+);
+
+function updateGif() {
+  var icon = document.getElementById("icon");
+  icon.src = localStorage.IconGif;
+}
+
 function getFact() {
   var limit = 1;
   var FactText = document.getElementById("facts");
-  console.log(FactText)
-  $.ajax({
+
+  const settings = {
+    async: true,
+    crossDomain: true,
+    url: "https://facts-by-api-ninjas.p.rapidapi.com/v1/facts?limit=" + limit,
     method: "GET",
-    url: "https://api.api-ninjas.com/v1/facts?limit=" + limit,
-    headers: { "X-Api-Key": "/NX/eMZ9yxaMBKsPsjkzmw==JMjnc7LdKtYQNV9W" },
-    contentType: "application/json",
-    success: function (result) {
-      var fact = result[0].fact
-      FactText.innerHTML = fact;
+    headers: {
+      "X-RapidAPI-Key": "eb33b3735emsh6630f59760fd8c3p1fa8d7jsn39ffd81c4dca",
+      "X-RapidAPI-Host": "facts-by-api-ninjas.p.rapidapi.com",
     },
-    error: function ajaxError(jqXHR) {
-      FactText.style.content = jqXHR.responseText;
-      console.log(jqXHR.responseText)
-    },
+  };
+
+  $.ajax(settings).done(function (response) {
+    var fact = response[0].fact;
+    FactText.innerHTML = fact + ".";
   });
 }
