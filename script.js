@@ -28,3 +28,8 @@ function getFact() {
     FactText.innerHTML = fact + ".";
   });
 }
+
+function updateText() {
+  var Element = document.getElementById("dialog");
+  Element.innerHTML = "test moment";
+}
