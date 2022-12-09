@@ -56,7 +56,7 @@ a {
   height: 100%;
   width: 23%;
   border: none;
-  border-radius: 10px;
+  border-radius: 6.5px;
   background-color: rgb(35,35,35);
   color: white;
   font-size: 3vh;
@@ -73,7 +73,7 @@ a {
   background-color: rgb(30,30,30);
   width: 50%;
   height: 18%;
-  border-radius: 10px;
+  border-radius: 6.5px;
   margin-top: 2%;
 }
 
@@ -82,7 +82,7 @@ a {
   font-size: 3vh;
   background-color: rgb(45,45,45);
   color: white;
-  border-radius: 10px 10px 0 0;
+  border-radius: 6.5px 6.5px 0 0;
   font-family: 'Alexandria', sans-serif;
 }
 
