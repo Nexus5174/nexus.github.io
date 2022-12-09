@@ -1,6 +1,7 @@
 body {
   background-color: rgb(50,50,50);
   overflow: hidden;
+  font-family: 'open sans', serif;
 }
 
 #Holder {
